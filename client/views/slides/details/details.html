@@ -1,0 +1,144 @@
+<template name="SlidesDetails">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SlidesDetailsDetailsForm}}
+	</div>
+</template>
+
+<template name="SlidesDetailsDetailsForm">
+	<div id="slides-details-details-form" class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Details
+		</h2>
+		<form role="form" class="form-horizontal">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-subject-id">
+				<label for="SubjectId" class="col-sm-3 control-label">
+					Subject Id
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.SubjectId}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-tissue-id">
+				<label for="TissueId" class="col-sm-3 control-label">
+					Tissue Id
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.TissueId}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-tissue">
+				<label for="Tissue" class="col-sm-3 control-label">
+					Tissue
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.Tissue}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-number-of-slides">
+				<label for="NumberOfSlides" class="col-sm-3 control-label">
+					Number Of Slides
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.NumberOfSlides}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-freezer-number">
+				<label for="FreezerNumber" class="col-sm-3 control-label">
+					Freezer Number
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.FreezerNumber}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-shelf-number">
+				<label for="ShelfNumber" class="col-sm-3 control-label">
+					Shelf Number
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.ShelfNumber}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-box-number">
+				<label for="BoxNumber" class="col-sm-3 control-label">
+					Box Number
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.BoxNumber}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-slot">
+				<label for="Slot" class="col-sm-3 control-label">
+					Slot
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.Slot}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-age">
+				<label for="age" class="col-sm-3 control-label">
+					Age
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.age}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-note">
+				<label for="note" class="col-sm-3 control-label">
+					Note
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{slide.note}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div col-sm-9 col-sm-offset-3">
+					<a href="#" id="form-close-button" class="btn btn-primary">
+						OK
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

@@ -1,0 +1,164 @@
+<template name="FreezersDetails">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> FreezersDetailsDetailsForm}}
+	</div>
+</template>
+
+<template name="FreezersDetailsDetailsForm">
+	<div id="freezers-details-details-form" class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Details
+		</h2>
+		<form role="form" class="form-horizontal">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-id">
+				<label for="id" class="col-sm-3 control-label">
+					Id
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.id}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-locationnum">
+				<label for="locationnum" class="col-sm-3 control-label">
+					Location Number
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.locationnum}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-animalid">
+				<label for="animalid" class="col-sm-3 control-label">
+					Animal Id
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.animalid}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-barcode">
+				<label for="barcode" class="col-sm-3 control-label">
+					BarCode
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.barcode}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-dayofcollection">
+				<label for="dayofcollection" class="col-sm-3 control-label">
+					Day Of Collection
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.dayofcollection}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-project">
+				<label for="project" class="col-sm-3 control-label">
+					Project
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.project}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-group">
+				<label for="group" class="col-sm-3 control-label">
+					Group
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.group}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-sex">
+				<label for="sex" class="col-sm-3 control-label">
+					sex
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.sex}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-samplegroup">
+				<label for="samplegroup" class="col-sm-3 control-label">
+					Sample Group
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.samplegroup}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-item">
+				<label for="item" class="col-sm-3 control-label">
+					Item
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.item}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-quantity">
+				<label for="quantity" class="col-sm-3 control-label">
+					Quantity
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.quantity}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-comments">
+				<label for="comments" class="col-sm-3 control-label">
+					Comments
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static">
+						{{freezer.comments}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div col-sm-9 col-sm-offset-3">
+					<a href="#" id="form-close-button" class="btn btn-primary">
+						OK
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

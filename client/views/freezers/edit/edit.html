@@ -1,0 +1,189 @@
+<template name="FreezersEdit">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> FreezersEditEditForm}}
+	</div>
+</template>
+
+<template name="FreezersEditEditForm">
+	<div id="freezers-edit-edit-form" class="">
+		<h2 id="component-title">
+			Edit freezer
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-id">
+				<label for="id">
+					Id
+				</label>
+				<div class="input-div">
+					<input type="text" name="id" value="{{freezer.id}}" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-locationnum">
+				<label for="locationnum">
+					Location Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="locationnum" value="{{freezer.locationnum}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-animalid">
+				<label for="animalid">
+					Animal Id
+				</label>
+				<div class="input-div">
+					<input type="text" name="animalid" value="{{freezer.animalid}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-barcode">
+				<label for="barcode">
+					BarCode
+				</label>
+				<div class="input-div">
+					<input type="text" name="barcode" value="{{freezer.barcode}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-dayofcollection">
+				<label for="dayofcollection">
+					Day Of Collection
+				</label>
+				<div class="input-div">
+					<input type="text" name="dayofcollection" value="{{freezer.dayofcollection}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-project">
+				<label for="project">
+					Project
+				</label>
+				<div class="input-div">
+					<input type="text" name="project" value="{{freezer.project}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-group">
+				<label for="group">
+					Group
+				</label>
+				<div class="input-div">
+					<input type="text" name="group" value="{{freezer.group}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-sex">
+				<label for="sex">
+					sex
+				</label>
+				<div class="input-div">
+					<input type="text" name="sex" value="{{freezer.sex}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-samplegroup">
+				<label for="samplegroup">
+					Sample Group
+				</label>
+				<div class="input-div">
+					<input type="text" name="samplegroup" value="{{freezer.samplegroup}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-item">
+				<label for="item">
+					Item
+				</label>
+				<div class="input-div">
+					<input type="text" name="item" value="{{freezer.item}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-quantity">
+				<label for="quantity">
+					Quantity
+				</label>
+				<div class="input-div">
+					<input type="text" name="quantity" value="{{freezer.quantity}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-comments">
+				<label for="comments">
+					Comments
+				</label>
+				<div class="input-div">
+					<textarea class="form-control" name="comments">{{freezer.comments}}</textarea>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

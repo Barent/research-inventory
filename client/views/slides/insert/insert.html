@@ -1,0 +1,165 @@
+<template name="SlidesInsert">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SlidesInsertInsertForm}}
+	</div>
+</template>
+
+<template name="SlidesInsertInsertForm">
+	<div id="slides-insert-insert-form" class="">
+		<h2 id="component-title">
+			New slide
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-subject-id">
+				<label for="SubjectId">
+					Subject Id
+				</label>
+				<div class="input-div">
+					<input type="text" name="SubjectId" value="" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-tissue-id">
+				<label for="TissueId">
+					Tissue Id
+				</label>
+				<div class="input-div">
+					<input type="text" name="TissueId" value="-" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-tissue">
+				<label for="Tissue">
+					Tissue
+				</label>
+				<div class="input-div">
+					<input type="text" name="Tissue" value="-" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-number-of-slides">
+				<label for="NumberOfSlides">
+					Number Of Slides
+				</label>
+				<div class="input-div">
+					<input type="text" name="NumberOfSlides" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-freezer-number">
+				<label for="FreezerNumber">
+					Freezer Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="FreezerNumber" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-shelf-number">
+				<label for="ShelfNumber">
+					Shelf Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="ShelfNumber" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-box-number">
+				<label for="BoxNumber">
+					Box Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="BoxNumber" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-slot">
+				<label for="Slot">
+					Slot
+				</label>
+				<div class="input-div">
+					<input type="text" name="Slot" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-age">
+				<label for="age">
+					Age
+				</label>
+				<div class="input-div">
+					<input type="text" name="age" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-note">
+				<label for="note">
+					Note
+				</label>
+				<div class="input-div">
+					<textarea class="form-control" name="note"></textarea>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
