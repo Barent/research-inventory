@@ -3,6 +3,33 @@ var verifyEmail = false;
 Accounts.config({ sendVerificationEmail: verifyEmail });
 
 Meteor.startup(function() {
+	//create admin user
+	if(Meteor.users.find().count() === 0) {
+
+	    console.log('Created Admin user');
+
+	    Accounts.createUser({
+	        username: 'RIAdmin',
+	        email: '',
+	        password: '',
+	        roles: ["admin"],
+	        profile: {
+	            name: ''
+	        }
+	    });
+	}
+
+	if(Accounts.findUserByEmail('') != null){
+		//get user object
+		var userObject = Accounts.findUserByEmail('');
+		//check roles array for admin
+		var rolesArray = userObject.roles;
+		if(rolesArray[0] !== 'admin'){
+			Meteor.users.update(userObject._id, { $set: { roles: ["admin"] } })
+		}
+
+	}
+
 	// read environment variables from Meteor.settings
 	if(Meteor.settings && Meteor.settings.env && _.isObject(Meteor.settings.env)) {
 		for(var variableName in Meteor.settings.env) {

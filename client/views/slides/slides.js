@@ -129,6 +129,30 @@ Template.SlidesView.events({
 
 		return true;
 	},
+	"click #deleteAll": function(e, t) {
+		e.preventDefault();
+		
+		bootbox.dialog({
+			message: "Delete? Are you sure? This will delete all slides.",
+			title: "Delete All",
+			animate: false,
+			buttons: {
+				success: {
+					label: "Yes",
+					className: "btn-success",
+					callback: function() {
+					//need to call server side method
+					Meteor.call('deleteAllMySlides');
+						
+					}
+				},
+				danger: {
+					label: "No",
+					className: "btn-default"
+				}
+			}
+		});
+	},
 
 	"click #dataview-insert-button": function(e, t) {
 		e.preventDefault();
@@ -184,7 +208,8 @@ Template.SlidesView.helpers({
 	},
 	"viewAsGallery": function() {
 		return pageSession.get("SlidesViewStyle") == "gallery";
-	}
+	},
+
 
 	
 });
